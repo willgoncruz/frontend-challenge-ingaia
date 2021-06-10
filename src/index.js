@@ -6,10 +6,12 @@ import reportWebVitals from './reportWebVitals';
 import { ApolloProvider } from '@apollo/client';
 import GraphqlClient from './api/client';
 
+import { SearchPage } from './pages/SearchPage';
+
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={GraphqlClient}>
-      <App />
+      <SearchPage />
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById('root')
