@@ -6,6 +6,7 @@ import { SearchCharactersQuery } from '../../api/query/character';
 import { Logo } from '../../components/Logo';
 import { Loading } from '../../components/Loading';
 import { SearchBar } from '../../components/SearchBar';
+import { CharacterList } from '../../components/CharacterList';
 
 import {
     PageContainer
@@ -21,11 +22,15 @@ export const SearchPage = observer(() => {
     console.log(loading, error, data)
     // store.updateStore(data.characters.info);
 
+    const { characters = {} } = data || {};
+    const { results = [] } = characters;
     return (
         <PageContainer>
             {loading && <Loading /> }
             <Logo />
             <SearchBar />
+
+            <CharacterList characters={results} />
         </PageContainer>
     );
 });
