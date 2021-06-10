@@ -7,29 +7,23 @@ import { Logo } from '../../components/Logo';
 import { SearchBar } from '../../components/SearchBar';
 
 import {
-    SearchButton,
-    PageContainer,
-    SearchContainer
+    PageContainer
 } from './style.js';
 
 export const SearchPage = observer(() => {
     const store = useSearchStore();
+
     const { loading, error, data } = useQuery(SearchCharactersQuery(store.page, store.term));
-
-
     if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
 
     console.log(data.characters.info)
-    store.updateStore(data.characters.info);
+    // store.updateStore(data.characters.info);
 
     return (
         <PageContainer>
             <Logo />
-            <SearchContainer>
-                <SearchBar />
-                <SearchButton>Search</SearchButton>
-            </SearchContainer>
+            <SearchBar />
         </PageContainer>
     );
 });

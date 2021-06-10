@@ -1,8 +1,23 @@
-import { SearchBarInput } from './style.js';
+import { useState } from 'react';
+import { observer } from 'mobx-react-lite';
+import { useSearchStore } from '../../providers/search';
 
-export const SearchBar = () => {
+import { SearchBarInput, SearchContainer, SearchButton } from './style.js';
+
+export const SearchBar = observer(() => {
+    const store = useSearchStore();
+    const [term, setTerm] = useState(store.term);
 
     return (
-        <SearchBarInput type="text" name="search" placeholder="Search characters"></SearchBarInput>
+        <SearchContainer>
+            <SearchBarInput
+                type="text"
+                name="search"
+                value={term}
+                placeholder="Search characters"
+                onChange={ev => setTerm(ev.target.value)}
+            />
+            <SearchButton onClick={() => store.changeTerm(term)}>Search</SearchButton>
+        </SearchContainer>
     );
-};
+});
