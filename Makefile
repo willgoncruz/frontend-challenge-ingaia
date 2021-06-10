@@ -1,6 +1,6 @@
 # First time setup
 setup:
-	npm run install
+	npm install
 
 # Run dev server
 run:
@@ -8,4 +8,10 @@ run:
 
 # Deploy application to github pages
 deploy:
-	npm run install
+	npm install
+
+lint:
+	npx eslint .
+
+lint-fix:
+	npx eslint . --fix
