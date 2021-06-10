@@ -3,6 +3,15 @@ import { useQuery } from '@apollo/client';
 import { useSearchStore } from '../../providers/search';
 import { SearchCharactersQuery } from '../../api/query/character';
 
+import { Logo } from '../../components/Logo';
+import { SearchBar } from '../../components/SearchBar';
+
+import {
+    SearchButton,
+    PageContainer,
+    SearchContainer
+} from './style.js';
+
 export const SearchPage = observer(() => {
     const store = useSearchStore();
     const { loading, error, data } = useQuery(SearchCharactersQuery(store.page, store.term));
@@ -15,8 +24,12 @@ export const SearchPage = observer(() => {
     store.updateStore(data.characters.info);
 
     return (
-        <div className="App">
-
-        </div>
+        <PageContainer>
+            <Logo />
+            <SearchContainer>
+                <SearchBar />
+                <SearchButton>Search</SearchButton>
+            </SearchContainer>
+        </PageContainer>
     );
 });
