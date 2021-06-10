@@ -38,6 +38,8 @@ export const SearchBarInput = styled.input`
     background: transparent;
 
     color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px;
 
     &::placeholder {
         font-family: Nunito;
