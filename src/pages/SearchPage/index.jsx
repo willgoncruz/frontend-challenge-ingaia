@@ -16,21 +16,17 @@ export const SearchPage = observer(() => {
     const store = useSearchStore();
 
     const { loading, error, data } = useQuery(SearchCharactersQuery(store.page, store.term), { skip: !store.term });
-    // if (loading) return 'Loading...';
     if (error) return `Error! ${error.message}`;
 
-    console.log(loading, error, data)
-    // store.updateStore(data.characters.info);
-
     const { characters = {} } = data || {};
-    const { results = [] } = characters;
+    const { info = {}, results = [] } = characters;
     return (
         <PageContainer>
             {loading && <Loading /> }
             <Logo />
             <SearchBar />
 
-            <CharacterList characters={results} />
+            <CharacterList characters={results} pages={info.pages} />
         </PageContainer>
     );
 });
