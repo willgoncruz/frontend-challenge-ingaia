@@ -31,11 +31,9 @@ export const CharacterDetailsQuery = (id) => {
                 image
                 location {
                     id
-                    name
                 }
                 origin {
                     id
-                    name
                 }
             }
         }
