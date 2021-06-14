@@ -2,24 +2,16 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     position: relative;
-    width: 254px;
-    height: 223px;
-    margin-top: 24px;
 
     background: #1B1B1B;
     border: 2px solid #606060;
     box-sizing: border-box;
     border-radius: 8px;
 
-    &:hover {
-        border: 2px solid #CBD736;
-        box-shadow: 0px 0px 0px 3px #C9D636, 0px 0px 5px 4px #C9D636, inset 0px 0px 0px 1px rgba(0, 0, 0, 0.6);
-    }
+    width: 100%;
+    height: 100%;
 
-    &:selected {
-        border: 2px solid #CBD736;
-        box-shadow: 0px 0px 0px 3px #C9D636, 0px 0px 5px 4px #C9D636, inset 0px 0px 0px 1px rgba(0, 0, 0, 0.6);
-    }
+    ${props => props.newStyle}
 `;
 
 export const ProfileImage = styled.img`
@@ -28,7 +20,7 @@ export const ProfileImage = styled.img`
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 6px;
     filter: ${props => props.dead ? 'grayscale(100%)' : ''};
 `;
 
@@ -38,10 +30,10 @@ export const InfoContainer = styled.div`
     bottom: 0;
     height: 55px;
 
-    // background: #1B1B1B;
+    border-radius: 0 0 6px 6px;
+
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(23px);
-    // filter: blur(23px);
 `;
 
 export const Name = styled.h3`
@@ -49,14 +41,12 @@ export const Name = styled.h3`
     margin-top: 7px;
     margin-left: 13px;
     margin-bottom: 0px;
-    // margin-right: 10px;
 
     font-family: Seravek;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 25px;
-    /* identical to box height */
 
     color: #FFFFFF;
 `;
@@ -71,7 +61,6 @@ export const Species = styled.h4`
     font-weight: normal;
     font-size: 12px;
     line-height: 15px;
-    /* identical to box height */
 
     color: #FFFFFF;
 `;
