@@ -19,3 +19,27 @@ export const SearchCharactersQuery = (page, nameFilter) => {
         }
     `
 };
+
+export const CharacterDetailsQuery = (id) => {
+    return gql`
+        query {
+            character(id: ${id}) {
+                name
+                species
+                status
+                gender
+                image
+                location {
+                    name
+                    type
+                    dimension
+                }
+                origin {
+                    name
+                    type
+                    dimension
+                }
+            }
+        }
+    `;
+};

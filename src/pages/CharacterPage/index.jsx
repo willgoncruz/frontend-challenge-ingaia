@@ -1,13 +1,17 @@
+import { useQuery } from '@apollo/client';
 import { useHistory, useParams } from 'react-router';
+import { CharacterDetailsQuery } from '../../api/query/character';
 import BackdropContainer from '../../components/Backdrop';
 import { CharacterCard } from '../../components/CharacterCard';
-
+import { Location } from '../../components/Location';
+import { About } from '../../components/About';
 import header from '../../images/filter.png';
 
 import {
     HeaderImage,
     CardContainer,
     ModalContainer,
+    DetailsContainer,
     CharacterDataContainer
 } from './style.js';
 
@@ -20,6 +24,10 @@ export const CharacterPage = () => {
         history.goBack();
     };
 
+    const { loading, error, data } = useQuery(CharacterDetailsQuery(id));
+    if (loading || error) return ``;
+
+    const { character = {} } = data || {};
     return (
         <ModalContainer onClick={modalClose}>
             <BackdropContainer>
@@ -27,10 +35,13 @@ export const CharacterPage = () => {
                     <HeaderImage src={header} alt='Header Character Image' />
 
                     <CardContainer>
-                        <CharacterCard name={"Rick"} species={"Human"} image={"https://rickandmortyapi.com/api/character/avatar/2.jpeg"} />
+                        <CharacterCard {...character} />
                     </CardContainer>
 
-                    {id}
+                    <DetailsContainer>
+                        <About {...character} />
+                        <Location title='Origin' {...character.origin} />
+                    </DetailsContainer>
                 </CharacterDataContainer>
             </BackdropContainer>
         </ModalContainer>

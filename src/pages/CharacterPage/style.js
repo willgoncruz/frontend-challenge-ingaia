@@ -48,3 +48,12 @@ export const CardContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
 `;
+
+export const DetailsContainer = styled.section`
+    display: block;
+    position: relative;
+
+    margin-top: 140px;
+    margin-left: 21px;
+    margin-right: 21px;
+`;
