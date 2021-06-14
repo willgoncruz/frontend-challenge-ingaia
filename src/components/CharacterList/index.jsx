@@ -5,6 +5,15 @@ import { CharacterCard } from '../CharacterCard';
 
 const StyledLink = styled(Link)`
     text-decoration: none;
+
+    &:focus {
+        outline: none;
+
+        & > div {
+            border: 2px solid #CBD736;
+            box-shadow: 0px 0px 0px 3px #C9D636, 0px 0px 5px 4px #C9D636, inset 0px 0px 0px 1px rgba(0, 0, 0, 0.6);
+        }
+    }
 `;
 
 const CharacterLink = ({ id, children }) => {

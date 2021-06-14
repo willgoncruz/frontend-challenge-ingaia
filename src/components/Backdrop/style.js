@@ -9,6 +9,4 @@ export const BackdropContainer = styled.div`
     height: 100vh;
 
     z-index: 1;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
 `;

@@ -30,14 +30,27 @@ export const CharacterDetailsQuery = (id) => {
                 gender
                 image
                 location {
+                    id
                     name
-                    type
-                    dimension
                 }
                 origin {
+                    id
                     name
-                    type
-                    dimension
+                }
+            }
+        }
+    `;
+};
+
+export const LocationDetailsQuery = (id) => {
+    return gql`
+        query {
+            location(id: ${id}) {
+                name
+                type
+                dimension
+                residents {
+                    id
                 }
             }
         }

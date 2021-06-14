@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
-export const ModalContainer = styled.div`
+import { BackdropContainer } from '../../components/Backdrop/style.js';
+
+export const ModalContainer = styled(BackdropContainer)`
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
-    // background-color: red;
+    background: rgba(0, 0, 0, 0.8);
 `;
 
 export const CharacterDataContainer = styled.div`
@@ -55,5 +57,18 @@ export const DetailsContainer = styled.section`
 
     margin-top: 140px;
     margin-left: 21px;
-    margin-right: 21px;
+    padding-right: 21px;
+    padding-bottom: 40px;
+
+    height: fill-available;
+    overflow-y: scroll;
+`;
+
+export const CloseButton = styled.img`
+    position: absolute;
+    top: 27px;
+    left: 27px;
+
+    width: 17px;
+    height: 17px;
 `;

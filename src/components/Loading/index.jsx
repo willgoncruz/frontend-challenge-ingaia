@@ -1,15 +1,15 @@
 import img from '../../images/loading.png';
-import BackdropContainer from '../Backdrop';
 import {
     LoadingText,
-    LoadingImage
+    LoadingImage,
+    LoadingContainer
 } from './style.js';
 
 export const Loading = () => {
     return (
-        <BackdropContainer>
+        <LoadingContainer>
             <LoadingImage src={img} alt="Loading"></LoadingImage>
             <LoadingText>Loading</LoadingText>
-        </BackdropContainer>
+        </LoadingContainer>
     );
 };
