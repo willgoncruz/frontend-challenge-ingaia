@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { BackdropContainer } from '../../components/Backdrop/style.js';
 
@@ -23,6 +23,18 @@ export const CharacterDataContainer = styled.div`
     border: 1px solid rgba(96, 96, 96, 0.3);
     background: rgba(0, 0, 0, 0.8);
     border-radius: 16px;
+
+    @media(min-width: 1024px) {
+        max-width: 1034px;
+        margin: 0 auto;
+    }
+
+    @media(min-width: 1440px) {
+        top: 50px;
+        left: 165px;
+        right: 165px;
+        bottom: 50px;
+    }
 `;
 
 export const HeaderImage = styled.img`
@@ -35,6 +47,12 @@ export const HeaderImage = styled.img`
     height: 65px;
 
     filter: blur(5px);
+
+    @media(min-width: 1024px) {
+        height: fill-available;
+        rotate: 90deg;
+        width: 441px;
+    }
 `;
 
 export const CardContainer = styled.div`
@@ -49,6 +67,22 @@ export const CardContainer = styled.div`
 
     margin-left: auto;
     margin-right: auto;
+
+    @media(min-width: 1024px) {
+        margin: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        left: 25px;
+        width: 350px;
+        height: 500px;
+    }
+
+    @media(min-width: 1440px) {
+        left: -50px;
+        width: 401px;
+        height: 653px;
+    }
 `;
 
 export const DetailsContainer = styled.section`
@@ -62,13 +96,39 @@ export const DetailsContainer = styled.section`
 
     height: fill-available;
     overflow-y: scroll;
+
+    @media(min-width: 1024px) {
+        margin-top: 72px;
+        margin-left: 500px;
+    }
 `;
 
 export const CloseButton = styled.img`
     position: absolute;
-    top: 27px;
-    left: 27px;
+    top: -90px;
+    left: 7px;
+    z-index: 1;
 
     width: 17px;
     height: 17px;
+
+    @media(min-width: 1024px) {
+        visibility: hidden;
+    }
+`;
+
+export const HideModalButton = css`
+    visibility: hidden;
+    position: absolute;
+    z-index: 2;
+
+    @media(min-width: 1024px) {
+        visibility: inherit;
+        top: 20px;
+        left: 25px;
+    }
+
+    // @media(min-width: 1440px) {
+    //     top: 20px;
+    // }
 `;

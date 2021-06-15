@@ -7,11 +7,24 @@ export const LoadingContainer = styled(BackdropContainer)`
     backdrop-filter: blur(5px);
 `;
 
+export const CenterContainer = styled.div`
+    height: fit-content;
+    margin: auto;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+`;
+
 export const LoadingImage = styled.img`
-    margin-top: 50%;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid #606060;
+    box-sizing: border-box;
+    border-radius: 8px;
 `;
 
 export const LoadingText = styled.div`

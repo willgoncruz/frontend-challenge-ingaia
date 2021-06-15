@@ -4,6 +4,11 @@ export const ListContainer = styled.div`
     position: relative;
     width: fill-available;
     margin-top: 24px;
+
+    display: flex;
+    flex-flow: wrap;
+    flex-direction: row;
+    justify-content: space-around;
 `;
 
 export const CharacterListCard = css`

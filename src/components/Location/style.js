@@ -14,6 +14,11 @@ export const LocationType = styled.h4`
     color: #8C8C8C;
     margin-top: 17px;
     margin-bottom: 0px;
+
+    @media(min-width: 1024px) {
+        font-size: 14px;
+        line-height: 19px;
+    }
 `;
 
 export const LocationName = styled.h1`
@@ -25,6 +30,11 @@ export const LocationName = styled.h1`
 
     color: #FFFFFF;
     margin: 0px;
+
+    @media(min-width: 1024px) {
+        font-size: 28px;
+        line-height: 26px;
+    }
 `;
 
 export const LocationDimension = styled.h2`
@@ -37,6 +47,12 @@ export const LocationDimension = styled.h2`
     color: #D3D3D3;
     margin-top: 3px;
     margin-bottom: 0px;
+
+    @media(min-width: 1024px) {
+        font-size: 18px;
+        line-height: 25px;
+        margin: 0px;
+    }
 `;
 
 export const ResidentsContainer = styled.div`
@@ -63,4 +79,9 @@ export const ResidentText = styled.span`
     line-height: 19px;
 
     color: #8C8C8C;
+
+    // @media(min-width: 1024px) {
+    //     font-size: 18px;
+    //     line-height: 25px;
+    // }
 `;

@@ -5,5 +5,5 @@ export const PageContainer = styled.div`
     display: flex;
     margin: 10px 32px;
     width: fill-available;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 `;

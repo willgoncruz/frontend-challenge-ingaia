@@ -4,6 +4,7 @@ import { useHistory, useParams } from 'react-router';
 import { CharacterDetailsQuery } from '../../api/query/character';
 import { CharacterCard } from '../../components/CharacterCard';
 import { LocationLoader } from '../../components/LocationLoader';
+import { Button } from '../../components/Button';
 import { About } from '../../components/About';
 import header from '../../images/filter.png';
 import close from '../../images/close.png';
@@ -13,6 +14,7 @@ import {
     HeaderImage,
     CardContainer,
     ModalContainer,
+    HideModalButton,
     DetailsContainer,
     CharacterDataContainer
 } from './style.js';
@@ -46,8 +48,10 @@ export const CharacterPage = () => {
     const { character = {} } = data || {};
     return (
         <ModalContainer>
-            <CloseButton src={close} alt="Close Character Details" onClick={modalClose} />
             <CharacterDataContainer>
+                <CloseButton src={close} alt="Close Character Details" onClick={modalClose} />
+                <Button alt="Close Character Details" onClick={modalClose} newStyle={HideModalButton}>Close</Button>
+
                 <HeaderImage src={header} alt='Header Character Image' />
 
                 <CardContainer>

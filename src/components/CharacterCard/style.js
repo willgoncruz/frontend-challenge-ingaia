@@ -10,6 +10,12 @@ export const Card = styled.div`
 
     width: 100%;
     height: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 540px) {
+        margin-left: unset;
+        margin-right: unset;
+    }
 
     ${props => props.newStyle}
 `;
