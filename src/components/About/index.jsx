@@ -1,21 +1,21 @@
 import { AboutText } from './style.js';
 import { DetailsTitle } from '../DetailsTitle';
 
-export const About = ({ name, gender, species, status }) => {
+export const About = ({ name, gender = '', species, status }) => {
     const getStatusText = (pronoum, status) => {
-        if (status === 'dead') {
-            return `${pronoum} is dead.`;
+        if (status === 'Dead') {
+            return `${pronoum} is dead`;
         }
 
-        if (status === 'alive') {
-            return `${pronoum} is alive and well.`;
+        if (status === 'Alive') {
+            return `${pronoum} is alive and well`;
         }
 
-        return `It can't be told if he is alive or dead`;
+        return `It can't be told if ${pronoum.toLowerCase()} is alive or dead`;
     }
 
-    const verb = (status === 'dead') ? 'was' : 'is';
-    const pronoum = (gender === 'Male') ? 'He' : 'She';
+    const verb = (status === 'Dead') ? 'was' : 'is';
+    const pronoum = (gender.toLowerCase() === 'male') ? 'He' : 'She';
     const statusText = getStatusText(pronoum, status);
 
     return (
