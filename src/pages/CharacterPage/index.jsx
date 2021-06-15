@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { useHistory, useParams } from 'react-router';
 import { CharacterDetailsQuery } from '../../api/query/character';
 import { CharacterCard } from '../../components/CharacterCard';
-import { Location } from '../../components/Location';
+import { LocationLoader } from '../../components/LocationLoader';
 import { About } from '../../components/About';
 import header from '../../images/filter.png';
 import close from '../../images/close.png';
@@ -56,8 +56,8 @@ export const CharacterPage = () => {
 
                 <DetailsContainer>
                     <About {...character} />
-                    <Location title='Origin' {...character.origin || {}} />
-                    <Location title='Location' {...character.location || {}} />
+                    <LocationLoader title='Origin' {...character.origin || {}} />
+                    <LocationLoader title='Location' {...character.location || {}} />
                 </DetailsContainer>
             </CharacterDataContainer>
         </ModalContainer>

@@ -6,6 +6,10 @@ setup:
 run:
 	npm run start
 
+# Run unit test suit
+test:
+	npm run test
+
 # Deploy application to github pages
 deploy:
 	npm install

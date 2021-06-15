@@ -1,5 +1,3 @@
-import { useQuery } from '@apollo/client';
-import { LocationDetailsQuery } from '../../api/query/character';
 import { DetailsTitle } from '../DetailsTitle';
 
 import residentIcon from '../../images/residents.png';
@@ -13,18 +11,13 @@ import {
     ResidentsContainer
 } from './style.js';
 
-export const Location = ({ id, title }) => {
-    const { loading, error, data } = useQuery(LocationDetailsQuery(id), { skip: (id === null) });
-    if (loading || error) return ``;
-
-    const { location = {} } = data || {};
-    const { name, type, dimension, residents = []} = location;
+export const Location = ({ id, title, name, type, dimension, residents = [] }) => {
     return (
         <LocationContainer>
             <DetailsTitle>{title}</DetailsTitle>
-            <LocationType>{type}</LocationType>
+            <LocationType>{type || "Unknown Planet"}</LocationType>
             <LocationName>{name || "Unknown"}</LocationName>
-            <LocationDimension>{dimension}</LocationDimension>
+            <LocationDimension>{dimension || "Unknown dimension"}</LocationDimension>
             { id !== null &&
                 <ResidentsContainer>
                     <ResidentIcon src={residentIcon} alt='Resident count icon' />
