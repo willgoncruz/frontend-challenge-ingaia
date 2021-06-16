@@ -10,7 +10,7 @@ import { HashRouter as Router } from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={GraphqlClient}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <App />
       </Router>
     </ApolloProvider>

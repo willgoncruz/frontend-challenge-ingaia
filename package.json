@@ -2,7 +2,7 @@
   "name": "frontend-challenge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://willgoncruz.github.io/frontend-challenge-ingaia",
+  "homepage": "https://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@willgoncruz.github.io/frontend-challenge-ingaia",
   "dependencies": {
     "@apollo/client": "^3.3.20",
     "@testing-library/jest-dom": "^5.13.0",
