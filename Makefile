@@ -12,7 +12,7 @@ test:
 
 # Deploy application to github pages
 deploy:
-	npm install
+	npm run deploy
 
 lint:
 	npx eslint .
