@@ -8,6 +8,7 @@ import { Button } from '../../components/Button';
 import { About } from '../../components/About';
 import header from '../../images/filter.png';
 import close from '../../images/close.png';
+import FocusTrap from 'focus-trap-react';
 
 import {
     CloseButton,
@@ -15,7 +16,9 @@ import {
     CardContainer,
     ModalContainer,
     HideModalButton,
+    OriginAnimation,
     DetailsContainer,
+    LocationAnimation,
     CharacterDataContainer
 } from './style.js';
 
@@ -48,22 +51,24 @@ export const CharacterPage = () => {
     const { character = {} } = data || {};
     return (
         <ModalContainer>
-            <CharacterDataContainer>
-                <CloseButton src={close} alt="Close Character Details" onClick={modalClose} />
-                <Button alt="Close Character Details" onClick={modalClose} newStyle={HideModalButton}>Close</Button>
+            <FocusTrap active={true}>
+                <CharacterDataContainer>
+                    <CloseButton src={close} alt="Close Character Details" onClick={modalClose} />
+                    <Button alt="Close Character Details" onClick={modalClose} newStyle={HideModalButton}>Close</Button>
 
-                <HeaderImage src={header} alt='Header Character Image' />
+                    <HeaderImage src={header} alt='Header Character Image' />
 
-                <CardContainer>
-                    <CharacterCard {...character} />
-                </CardContainer>
+                    <CardContainer>
+                        <CharacterCard {...character} />
+                    </CardContainer>
 
-                <DetailsContainer>
-                    <About {...character} />
-                    <LocationLoader title='Origin' {...character.origin || {}} />
-                    <LocationLoader title='Location' {...character.location || {}} />
-                </DetailsContainer>
-            </CharacterDataContainer>
+                    <DetailsContainer>
+                        <About {...character} />
+                        <LocationLoader title='Origin' newStyle={OriginAnimation} {...character.origin || {}} />
+                        <LocationLoader title='Location' newStyle={LocationAnimation} {...character.location || {}} />
+                    </DetailsContainer>
+                </CharacterDataContainer>
+            </FocusTrap>
         </ModalContainer>
     );
 }

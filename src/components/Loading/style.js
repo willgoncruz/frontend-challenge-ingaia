@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 
 import { BackdropContainer } from '../../components/Backdrop/style.js';
 
@@ -18,6 +18,15 @@ export const CenterContainer = styled.div`
     position: absolute;
 `;
 
+const spinning = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+`;
+
 export const LoadingImage = styled.img`
     display: block;
     margin-left: auto;
@@ -25,6 +34,8 @@ export const LoadingImage = styled.img`
     border: 2px solid #606060;
     box-sizing: border-box;
     border-radius: 8px;
+
+    animation: ${spinning} .5s infinite linear;
 `;
 
 export const LoadingText = styled.div`

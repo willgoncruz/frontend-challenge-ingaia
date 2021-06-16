@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const LocationContainer = styled.div`
     margin-top: 41px;
+
+    ${props => props.newStyle || ''}
 `;
 
 export const LocationType = styled.h4`

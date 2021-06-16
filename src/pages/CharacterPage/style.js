@@ -1,6 +1,10 @@
-import styled, { css } from "styled-components";
-
+import styled, { css, keyframes } from "styled-components";
 import { BackdropContainer } from '../../components/Backdrop/style.js';
+
+export const fadein = keyframes`
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+`;
 
 export const ModalContainer = styled(BackdropContainer)`
     position: fixed;
@@ -10,6 +14,7 @@ export const ModalContainer = styled(BackdropContainer)`
     bottom: 0;
 
     background: rgba(0, 0, 0, 0.8);
+    animation: ${fadein} .5s linear;
 `;
 
 export const CharacterDataContainer = styled.div`
@@ -127,8 +132,18 @@ export const HideModalButton = css`
         top: 20px;
         left: 25px;
     }
+`;
 
-    // @media(min-width: 1440px) {
-    //     top: 20px;
-    // }
+export const OriginAnimation = css`
+    opacity: 0;
+    animation: ${fadein} 1s ease-in;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+`;
+
+export const LocationAnimation = css`
+    opacity: 0;
+    animation: ${fadein} 1s ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
 `;

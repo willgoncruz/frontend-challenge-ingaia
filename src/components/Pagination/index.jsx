@@ -40,21 +40,19 @@ export const Pagination = observer(({ pages = 0 }) => {
     }
 
     const pagesArray = Array(pages).fill(0);
-    console.log(pagesArray);
-
     return (
         <PaginationContainer>
-            <Arrow available={isPreviousAvailable()} onClick={goToPreviousPage}>&lt;</Arrow>
+            <Arrow available={isPreviousAvailable()} onClick={goToPreviousPage} alt="Previous Page">&lt;</Arrow>
 
             <PageList>
-                <CurrentPage>{store.page}</CurrentPage>
+                <CurrentPage >{store.page}</CurrentPage>
 
                 {pagesArray.map((_, i) =>
-                    <PageNumber active={i+1 === store.page} onClick={() => updatePage(i+1)}>{i+1}</PageNumber>
+                    <PageNumber key={i} active={i+1 === store.page} onClick={() => updatePage(i+1)}>{i+1}</PageNumber>
                 )}
             </PageList>
 
-            <Arrow available={isNextAvailable()} onClick={goToNextPage}>&gt;</Arrow>
+            <Arrow available={isNextAvailable()} onClick={goToNextPage} alt="Next Page">&gt;</Arrow>
         </PaginationContainer>
     );
 });

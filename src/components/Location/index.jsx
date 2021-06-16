@@ -11,9 +11,9 @@ import {
     ResidentsContainer
 } from './style.js';
 
-export const Location = ({ id, title, name, type, dimension, residents = [] }) => {
+export const Location = ({ id, title, name, type, dimension, residents = [], newStyle }) => {
     return (
-        <LocationContainer>
+        <LocationContainer newStyle={newStyle}>
             <DetailsTitle>{title}</DetailsTitle>
             <LocationType>{type || "Unknown Planet"}</LocationType>
             <LocationName>{name || "Unknown"}</LocationName>

@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { fadein } from '../../pages/CharacterPage/style.js';
+
+export const AboutContainer = styled.div`
+    animation: ${fadein} 1s ease-in;
+    animation-fill-mode: forwards;
+`;
 
 export const AboutText = styled.p`
     margin-top: 8px;

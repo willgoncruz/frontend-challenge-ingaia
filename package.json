@@ -8,6 +8,7 @@
     "@testing-library/jest-dom": "^5.13.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "focus-trap-react": "^8.5.1",
     "graphql": "^15.5.0",
     "jest-styled-components": "^7.0.4",
     "mobx": "^6.3.2",

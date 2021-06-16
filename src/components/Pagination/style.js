@@ -5,9 +5,11 @@ export const PaginationContainer = styled.section`
     margin: 60px auto;
 `;
 
-export const Arrow = styled.div`
+export const Arrow = styled.button`
     cursor: pointer;
     display: inline-block;
+    border: 0;
+    background: transparent;
 
     font-family: Nunito;
     font-style: normal;
@@ -25,7 +27,7 @@ export const PageList = styled.div`
     text-align: center;
 `;
 
-export const CurrentPage = styled.span`
+export const CurrentPage = styled.button`
     font-family: Nunito;
     font-style: normal;
     font-weight: normal;
@@ -34,6 +36,8 @@ export const CurrentPage = styled.span`
 
     color: #CBD736;
     margin: 0 auto;
+    border: 0;
+    background: transparent;
 
     @media(min-width: 1024px) {
         visibility: hidden;
