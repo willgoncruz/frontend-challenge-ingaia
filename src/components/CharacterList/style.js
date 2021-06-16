@@ -8,6 +8,8 @@ export const ListContainer = styled.div`
     display: flex;
     flex-flow: wrap;
     flex-direction: row;
+
+    align-content: flex-start;
     justify-content: space-around;
 `;
 

@@ -6,6 +6,7 @@ import { SearchCharactersQuery } from '../../api/query/character';
 import { Logo } from '../../components/Logo';
 import { Loading } from '../../components/Loading';
 import { SearchBar } from '../../components/SearchBar';
+import { Pagination } from '../../components/Pagination';
 import { CharacterList } from '../../components/CharacterList';
 
 import {
@@ -27,6 +28,7 @@ export const SearchPage = observer(() => {
             <SearchBar />
 
             <CharacterList characters={results} pages={info.pages} />
+            <Pagination pages={info.pages} />
         </PageContainer>
     );
 });

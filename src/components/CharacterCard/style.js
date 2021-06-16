@@ -55,6 +55,10 @@ export const Name = styled.h3`
     line-height: 25px;
 
     color: #FFFFFF;
+
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 `;
 
 export const Species = styled.h4`

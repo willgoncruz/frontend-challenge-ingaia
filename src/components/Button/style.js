@@ -20,6 +20,7 @@ export const ButtonContainer = styled.button`
 
     color: #FFFFFF;
     padding: 10px 16px;
+    cursor: pointer;
 
     ${props => props.newStyle}
 `;

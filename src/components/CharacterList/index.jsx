@@ -6,6 +6,7 @@ import { CharacterCard } from '../CharacterCard';
 const StyledLink = styled(Link)`
     text-decoration: none;
     display: inline-block;
+    cursor: pointer;
 
     &:focus {
         outline: none;
