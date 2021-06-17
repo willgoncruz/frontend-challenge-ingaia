@@ -8,14 +8,17 @@ Link da aplicação online: https://willgoncruz.github.io/frontend-challenge-ing
 
 ## Primeira configuração
 Execute o comando abaixo para configurar o ambiente de desenvolvimento localmente.
+
 ```make setup```
 
 ## Ambiente de desenvolvimeto
 Execute o comando abaixo para subir o ambiente de desenvolvimento local.
+
 ```make run```
 
 ## Testes unitários
 Execute o comando abaixo para visualizar os testes unitários
+
 ```make test```
 
 ## Deploy
