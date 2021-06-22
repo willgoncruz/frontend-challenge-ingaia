@@ -108,15 +108,17 @@ export const DetailsContainer = styled.section`
     }
 `;
 
-export const CloseButton = styled.img`
+export const CloseButton = styled.button`
     position: absolute;
     top: -90px;
     left: 7px;
     z-index: 1;
 
-    width: 17px;
-    height: 17px;
+    width: fit-content;
+    height: fit-content;
 
+    border: 0;
+    background-color: transparent;
     @media(min-width: 1024px) {
         visibility: hidden;
     }

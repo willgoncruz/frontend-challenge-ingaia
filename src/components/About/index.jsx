@@ -21,7 +21,7 @@ export const About = ({ name, gender = '', species, status }) => {
     return (
         <AboutContainer>
             <DetailsTitle>About</DetailsTitle>
-            <AboutText>{name} {verb} a {gender} {species}. {statusText}. Last seen in .</AboutText>
+            <AboutText>{name} {verb} a {gender} {species}. {statusText}</AboutText>
         </AboutContainer>
     );
 }

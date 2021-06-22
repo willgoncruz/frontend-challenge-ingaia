@@ -53,7 +53,7 @@ export const CharacterPage = () => {
         <ModalContainer>
             <FocusTrap active={true}>
                 <CharacterDataContainer>
-                    <CloseButton src={close} alt="Close Character Details" onClick={modalClose} />
+                    <CloseButton onClick={modalClose}><img src={close} alt="Close Character Details" /></CloseButton>
                     <Button alt="Close Character Details" onClick={modalClose} newStyle={HideModalButton}>Close</Button>
 
                     <HeaderImage src={header} alt='Header Character Image' />
