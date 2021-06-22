@@ -100,7 +100,7 @@ export const DetailsContainer = styled.section`
     padding-bottom: 40px;
 
     height: fill-available;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     @media(min-width: 1024px) {
         margin-top: 72px;
