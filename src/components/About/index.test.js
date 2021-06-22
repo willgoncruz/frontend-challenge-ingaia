@@ -18,7 +18,6 @@ describe('Location Component Test', () => {
 
         expect(paragraph.html()).toContain(`${about.name} was a ${about.gender} ${about.species}.`);
         expect(paragraph.html()).toContain(`He is dead.`);
-        expect(paragraph.html()).toContain(`Last seen in`);
     });
 
 
@@ -30,7 +29,6 @@ describe('Location Component Test', () => {
 
         expect(paragraph.html()).toContain(`${about.name} is a ${about.gender} ${about.species}.`);
         expect(paragraph.html()).toContain(`She is alive and well.`);
-        expect(paragraph.html()).toContain(`Last seen in`);
     });
 
     test('render about status unknown', () => {
@@ -41,6 +39,5 @@ describe('Location Component Test', () => {
 
         expect(paragraph.html()).toContain(`${about.name} is a ${about.gender} ${about.species}.`);
         expect(paragraph.html()).toContain(`It can't be told if she is alive or dead`);
-        expect(paragraph.html()).toContain(`Last seen in`);
     });
 });
