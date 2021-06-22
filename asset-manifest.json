@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/frontend-challenge-ingaia/static/css/main.db65dff0.chunk.css",
-    "main.js": "/frontend-challenge-ingaia/static/js/main.67f5e843.chunk.js",
-    "main.js.map": "/frontend-challenge-ingaia/static/js/main.67f5e843.chunk.js.map",
+    "main.css": "/frontend-challenge-ingaia/static/css/main.04ab0f9a.chunk.css",
+    "main.js": "/frontend-challenge-ingaia/static/js/main.ae501aec.chunk.js",
+    "main.js.map": "/frontend-challenge-ingaia/static/js/main.ae501aec.chunk.js.map",
     "runtime-main.js": "/frontend-challenge-ingaia/static/js/runtime-main.4774ffa2.js",
     "runtime-main.js.map": "/frontend-challenge-ingaia/static/js/runtime-main.4774ffa2.js.map",
     "static/js/2.a0a87db7.chunk.js": "/frontend-challenge-ingaia/static/js/2.a0a87db7.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.0feccad3.chunk.js": "/frontend-challenge-ingaia/static/js/3.0feccad3.chunk.js",
     "static/js/3.0feccad3.chunk.js.map": "/frontend-challenge-ingaia/static/js/3.0feccad3.chunk.js.map",
     "index.html": "/frontend-challenge-ingaia/index.html",
-    "static/css/main.db65dff0.chunk.css.map": "/frontend-challenge-ingaia/static/css/main.db65dff0.chunk.css.map",
+    "static/css/main.04ab0f9a.chunk.css.map": "/frontend-challenge-ingaia/static/css/main.04ab0f9a.chunk.css.map",
     "static/js/2.a0a87db7.chunk.js.LICENSE.txt": "/frontend-challenge-ingaia/static/js/2.a0a87db7.chunk.js.LICENSE.txt",
     "static/media/index.css": "/frontend-challenge-ingaia/static/media/background.0137a31f.png",
     "static/media/filter.77b78e28.png": "/frontend-challenge-ingaia/static/media/filter.77b78e28.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.4774ffa2.js",
     "static/js/2.a0a87db7.chunk.js",
-    "static/css/main.db65dff0.chunk.css",
-    "static/js/main.67f5e843.chunk.js"
+    "static/css/main.04ab0f9a.chunk.css",
+    "static/js/main.ae501aec.chunk.js"
   ]
 }
