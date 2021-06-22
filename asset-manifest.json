@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/frontend-challenge-ingaia/static/css/main.541b8499.chunk.css",
-    "main.js": "/frontend-challenge-ingaia/static/js/main.54333339.chunk.js",
-    "main.js.map": "/frontend-challenge-ingaia/static/js/main.54333339.chunk.js.map",
+    "main.css": "/frontend-challenge-ingaia/static/css/main.db65dff0.chunk.css",
+    "main.js": "/frontend-challenge-ingaia/static/js/main.67f5e843.chunk.js",
+    "main.js.map": "/frontend-challenge-ingaia/static/js/main.67f5e843.chunk.js.map",
     "runtime-main.js": "/frontend-challenge-ingaia/static/js/runtime-main.4774ffa2.js",
     "runtime-main.js.map": "/frontend-challenge-ingaia/static/js/runtime-main.4774ffa2.js.map",
-    "static/js/2.ba88b465.chunk.js": "/frontend-challenge-ingaia/static/js/2.ba88b465.chunk.js",
-    "static/js/2.ba88b465.chunk.js.map": "/frontend-challenge-ingaia/static/js/2.ba88b465.chunk.js.map",
+    "static/js/2.a0a87db7.chunk.js": "/frontend-challenge-ingaia/static/js/2.a0a87db7.chunk.js",
+    "static/js/2.a0a87db7.chunk.js.map": "/frontend-challenge-ingaia/static/js/2.a0a87db7.chunk.js.map",
     "static/js/3.0feccad3.chunk.js": "/frontend-challenge-ingaia/static/js/3.0feccad3.chunk.js",
     "static/js/3.0feccad3.chunk.js.map": "/frontend-challenge-ingaia/static/js/3.0feccad3.chunk.js.map",
     "index.html": "/frontend-challenge-ingaia/index.html",
-    "static/css/main.541b8499.chunk.css.map": "/frontend-challenge-ingaia/static/css/main.541b8499.chunk.css.map",
-    "static/js/2.ba88b465.chunk.js.LICENSE.txt": "/frontend-challenge-ingaia/static/js/2.ba88b465.chunk.js.LICENSE.txt",
+    "static/css/main.db65dff0.chunk.css.map": "/frontend-challenge-ingaia/static/css/main.db65dff0.chunk.css.map",
+    "static/js/2.a0a87db7.chunk.js.LICENSE.txt": "/frontend-challenge-ingaia/static/js/2.a0a87db7.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/frontend-challenge-ingaia/static/media/background.0137a31f.png",
     "static/media/filter.77b78e28.png": "/frontend-challenge-ingaia/static/media/filter.77b78e28.png",
     "static/media/loading.1a60ec50.png": "/frontend-challenge-ingaia/static/media/loading.1a60ec50.png",
     "static/media/rickmortylogo.66cb6353.png": "/frontend-challenge-ingaia/static/media/rickmortylogo.66cb6353.png"
   },
   "entrypoints": [
     "static/js/runtime-main.4774ffa2.js",
-    "static/js/2.ba88b465.chunk.js",
-    "static/css/main.541b8499.chunk.css",
-    "static/js/main.54333339.chunk.js"
+    "static/js/2.a0a87db7.chunk.js",
+    "static/css/main.db65dff0.chunk.css",
+    "static/js/main.67f5e843.chunk.js"
   ]
 }
